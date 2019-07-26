@@ -1,0 +1,285 @@
+<section class="container p-t-3">
+    <div class="row">
+        <div class="col-lg-12">
+            <h4 style="padding-top:40px;">Trending Courses</h4>
+        </div>
+    </div>
+</section>
+<section class="container" style="padding-bottom:40px;">
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-md-3" style="padding-bottom:20px;">
+            <div *ngFor ="let courses of allcouseres">
+              <div class="card" style="box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);" *ngIf="courses.courseName=='Java'">
+                <img class="card-img-top" src="../../assets/Java.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Java Training</h5>
+                  <p class="card-text" style="font-size: 12px;color:darkgray">
+                    <i class="fa fa-video-camera" style="padding-right:10px;font-size: 12px;" aria-hidden="true"></i>Live Classes<br>
+                    <i class="fa fa-calendar" style="padding-right:10px;font-size: 12px;" aria-hidden="true"></i>Weekend<br><br>
+                    Reviews<br>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i><br><br>
+                    <b style="color:black">Best Price &nbsp;&nbsp; Rs:10,000/-</b>
+                  </p>
+                </div>
+                <div class="middle">
+                  <div class="text">
+                    <p style="text-align:left;">Next Batch<br>
+                      In 10 days-20 Days<br>
+                      <br><br>
+                      Courses Under the Program
+                      <li>Java Essentials</li><br>
+                      <a href="" class="btn btn-outline-primary" [routerLink]="['/singleCourse', courses.courseName]">SEE MORE</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3" style="padding-bottom:20px;">
+            <div *ngFor ="let courses of allcouseres">
+              <div class="card" style="box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);"  *ngIf="courses.courseName=='Nodejs'">
+                <img class="card-img-top" src="../../assets/nodejs3.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Node Js Training</h5>
+                  <p class="card-text" style="font-size: 12px;color:darkgray">
+                    <i class="fa fa-video-camera" style="padding-right:10px;font-size: 12px;" aria-hidden="true"></i>Live Classes<br>
+                    <i class="fa fa-calendar" style="padding-right:10px;font-size: 12px;" aria-hidden="true"></i>Weekend<br><br>
+                    Reviews<br>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i><br><br>
+                    <b style="color:black">Best Price &nbsp;&nbsp; Rs:10,000/-</b>
+                  </p>
+                </div>
+                <div class="middle">
+                  <div class="text">
+                    <p style="text-align:left;">Next Batch<br>
+                      In 10 days-20 Days<br>
+                      <br><br>
+                      Courses Under the Program
+                      <li>Node Js Essentials</li><br>
+                      <a href="" class="btn btn-outline-primary" [routerLink]="['/singleCourse', courses.courseName]">SEE MORE</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3" style="padding-bottom:20px;">
+            <div *ngFor ="let courses of allcouseres">
+              <div class="card" style="box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);"  *ngIf="courses.courseName=='Angular'">
+                <img class="card-img-top" src="../../assets/nodejs4.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Angular Training</h5>
+                  <p class="card-text" style="font-size: 12px;color:darkgray">
+                    <i class="fa fa-video-camera" style="padding-right:10px;font-size: 12px;" aria-hidden="true"></i>Live Classes<br>
+                    <i class="fa fa-calendar" style="padding-right:10px;font-size: 12px;" aria-hidden="true"></i>Weekend<br><br>
+                    Reviews<br>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i><br><br>
+                    <b style="color:black">Best Price &nbsp;&nbsp; Rs:10,000/-</b>
+                  </p>
+                </div>
+                <div class="middle">
+                  <div class="text">
+                    <p style="text-align:left;">Next Batch<br>
+                      In 10 days-20 Days<br>
+                      <br><br>
+                      Courses Under the Program
+                      <li>Angular Essentials</li><br>
+                      <a href="" class="btn btn-outline-primary" [routerLink]="['/singleCourse', courses.courseName]">SEE MORE</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3" style="padding-bottom:20px;">
+            <div *ngFor ="let courses of allcouseres">
+              <div class="card" style="box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);"  *ngIf="courses.courseName=='Reactjs'">
+                <img class="card-img-top" src="../../assets/nodejs5.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">React Js Training</h5>
+                  <p class="card-text" style="font-size: 12px;color:darkgray">
+                    <i class="fa fa-video-camera" style="padding-right:10px;font-size: 12px;" aria-hidden="true"></i>Live Classes<br>
+                    <i class="fa fa-calendar" style="padding-right:10px;font-size: 12px;" aria-hidden="true"></i>Weekend<br><br>
+                    Reviews<br>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i><br><br>
+                    <b style="color:black">Best Price &nbsp;&nbsp; Rs:10,000/-</b>
+                  </p>
+                </div>
+                <div class="middle">
+                  <div class="text">
+                    <p style="text-align:left;">Next Batch<br>
+                      In 10 days-20 Days<br>
+                      <br><br>
+                      Courses Under the Program
+                      <li>React Js Essentials</li><br>
+                      <a href="" class="btn btn-outline-primary" [routerLink]="['/singleCourse', courses.courseName]">SEE MORE</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-md-3" style="padding-bottom:20px;">
+            <div *ngFor ="let courses of allcouseres">
+              <div class="card" style="box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);"  *ngIf="courses.courseName=='AWS'">
+                <img class="card-img-top" src="../../assets/AWS.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Aws Training</h5>
+                  <p class="card-text" style="font-size: 12px;color:darkgray">
+                    <i class="fa fa-video-camera" style="padding-right:10px;font-size: 12px;" aria-hidden="true"></i>Live Classes<br>
+                    <i class="fa fa-calendar" style="padding-right:10px;font-size: 12px;" aria-hidden="true"></i>Weekend<br><br>
+                    Reviews<br>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i><br><br>
+                    <b style="color:black">Best Price &nbsp;&nbsp; Rs:10,000/-</b>
+                  </p>
+                </div>
+                <div class="middle">
+                  <div class="text">
+                    <p style="text-align:left;">Next Batch<br>
+                      In 10 days-20 Days<br>
+                      <br><br>
+                      Courses Under the Program
+                      <li>AWS Essentials</li><br>
+                      <a href="" class="btn btn-outline-primary" [routerLink]="['/singleCourse', courses.courseName]" >SEE MORE</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3" style="padding-bottom:20px;">
+            <div *ngFor ="let courses of allcouseres">
+              <div class="card" style="box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);"  *ngIf="courses.courseName=='C'">
+                <img class="card-img-top" src="../../assets/c.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">C language Training</h5>
+                  <p class="card-text" style="font-size: 12px;color:darkgray">
+                    <i class="fa fa-video-camera" style="padding-right:10px;font-size: 12px;" aria-hidden="true"></i>Live Classes<br>
+                    <i class="fa fa-calendar" style="padding-right:10px;font-size: 12px;" aria-hidden="true"></i>Weekend<br><br>
+                    Reviews<br>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i><br><br>
+                    <b style="color:black">Best Price &nbsp;&nbsp; Rs:10,000/-</b>
+                  </p>
+                </div>
+                <div class="middle">
+                  <div class="text">
+                    <p style="text-align:left;">Next Batch<br>
+                      In 10 days-20 Days<br>
+                      <br><br>
+                      Courses Under the Program
+                      <li>C language Essentials</li><br>
+                      <a href="" class="btn btn-outline-primary" [routerLink]="['/singleCourse', courses.courseName]">SEE MORE</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3" style="padding-bottom:20px;">
+            <div *ngFor ="let courses of allcouseres">
+              <div class="card" style="box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);"  *ngIf="courses.courseName=='Spark'">
+                <img class="card-img-top" src="../../assets/Spark.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Spark Training</h5>
+                  <p class="card-text" style="font-size: 12px;color:darkgray">
+                    <i class="fa fa-video-camera" style="padding-right:10px;font-size: 12px;" aria-hidden="true"></i>Live Classes<br>
+                    <i class="fa fa-calendar" style="padding-right:10px;font-size: 12px;" aria-hidden="true"></i>Weekend<br><br>
+                    Reviews<br>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i><br><br>
+                    <b style="color:black">Best Price &nbsp;&nbsp; Rs:10,000/-</b>
+                  </p>
+                </div>
+                <div class="middle">
+                  <div class="text">
+                    <p style="text-align:left;">Next Batch<br>
+                      In 10 days-20 Days<br>
+                      <br><br>
+                      Courses Under the Program
+                      <li>Spark course</li><br>
+                      <a href="" class="btn btn-outline-primary" [routerLink]="['/singleCourse', courses.courseName]">SEE MORE</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3" style="padding-bottom:20px;">
+            <div *ngFor ="let courses of allcouseres">
+              <div class="card" style="box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);"  *ngIf="courses.courseName=='Hadoop'">
+                <img class="card-img-top" src="../../assets/hadoop-cloud-computing.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Hadoop Training</h5>
+                  <p class="card-text" style="font-size: 12px;color:darkgray">
+                    <i class="fa fa-video-camera" style="padding-right:10px;font-size: 12px;" aria-hidden="true"></i>Live Classes<br>
+                    <i class="fa fa-calendar" style="padding-right:10px;font-size: 12px;" aria-hidden="true"></i>Weekend<br><br>
+                    Reviews<br>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i>
+                    <i class='fa fa-star' style='font-size:20px;color:#f4bd37;padding-top: 5px;'></i><br><br>
+                    <b style="color:black">Best Price &nbsp;&nbsp; Rs:10,000/-</b>
+                  </p>
+                </div>
+                <div class="middle">
+                  <div class="text">
+                    <p style="text-align:left;">Next Batch<br>
+                      In 10 days-20 Days<br>
+                      <br><br>
+                      Courses Under the Program
+                      <li>Hadoop course</li><br>
+                      <a href="" class="btn btn-outline-primary" [routerLink]="['/singleCourse', courses.courseName]">SEE MORE</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="fa fa-lg fa-chevron-left" aria-hidden="true" style="color:grey;float:left;margin-left: -60px;margin-top:-190px;"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="fa fa-lg fa-chevron-right" aria-hidden="true" style="color:grey;float:right;margin-right: -60px;margin-top:-190px;"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</section>

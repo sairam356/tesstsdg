@@ -1,0 +1,21 @@
+@media (min-width: 1000px) {
+   p a:hover {
+    background-color: lightblue;
+  }
+  .list-group{
+    position: absolute;width: 400px;background-color: lightblue;margin-left: 225px;margin-top: -5px;
+  }
+  .list-group-item: hover{
+    background-color: lightgrey;
+  }
+  .list-group-item{
+   background-color: white;
+  }
+  .fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+  }
+}

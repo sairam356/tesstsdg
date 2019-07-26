@@ -1,0 +1,212 @@
+<br>
+<nav aria-label="breadcrumb" style="margin-top:160px;">
+  <ol class="breadcrumb" >
+    <li class="breadcrumb-item "><a href="#" routerLink="" class="breadcrumb-item1">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page"><a href="" routerLink="/ListCourses" style="text-decoration:none;color:gray;">ALL Courses</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{course_name}}</li>
+  </ol>
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h4 style="padding-top:30px;">{{coursedetails.MainHeadingCourse}}</h4>
+    </div>
+    <div class="col-md-4">
+      <app-contactads></app-contactads>
+    </div>
+  </div>
+  <div class="card" style="box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);padding:20px;margin-top:20px;margin-bottom: 20px;">
+    <div class="row" style="padding:10px;">
+      <div class="col-md-4">
+        <!-- <embed src="https://www.youtube.com/watch?v=3u1fu6f8Hto" autostart="false" width="330" height="200" /> -->
+        <div class="embed-responsive embed-responsive-16by9">
+          <!-- <iframe width="560" height="315" src="https://www.youtube.com/watch?v=3u1fu6f8Hto" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+          <iframe width="560" height="315" [src]="videoURL" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <p style="text-align:justify;padding-top:20px;">
+          {{coursedetails.CourseDescription}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h4>{{coursedetails.onlineClassHeader}}</h4>
+    </div>
+  </div>
+  <div class="card" style="box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);padding:20px;margin-top:20px;margin-bottom: 20px;">
+    <div class="row" style="padding:10px;">
+      <div class="col-md-9">
+        <div class="card" style="box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);padding:20px;margin-top:20px;margin-bottom: 20px;">
+          <div class="row" style="padding:5px;" *ngFor="let time of timings">
+            <div class="col-md-2">
+              <p style="background-color:lightgray;padding:10px;text-align: center;">
+                {{time.Day}}<sup>{{time.sup}}</sup> {{time.Month}}
+              </p>
+            </div>
+            <div class="col-md-3">
+              {{time.FromTo}} {{time.days}} <br><span style="font-size:10px;color:blue;">{{time.type}}</span>
+            </div>
+            <div class="col-md-4">
+                <p style="padding-top:7px;">Timings : {{time.timing}}</p>
+            </div>
+            <div class="col-md-3" >
+              <a class="btn btn-outline-success">{{time.status}}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <p style="padding-top:110px;" class="text-center">
+        <a class="btn btn-warning" style="padding-left:20px;padding-right:20px;font-size: 20px;color:white;" href="/studentRegister" >Enroll Now</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<div class="container">
+  <h4 style="padding-bottom: 10px;"> {{coursedetails.CourseCiruculumName}} </h4>
+  <div id="accordion">
+    <div class="card" *ngFor="let CCurriculum of CourseCurriculumdetail; let i = index ">
+      <div class="card-header">
+        <a class="card-link" data-toggle="collapse" href="#collapse{{i}}">
+          {{CCurriculum.headerName}}
+        </a>
+      </div>
+      <div id="collapse{{i}}" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          <p style="font-size:15px;color:gray;"><b>Learning Objectives:</b> {{CCurriculum.LearningObjectives}}<br>
+            <b>Topics:</b><br>
+            &#9679;  {{CCurriculum.listofContent[0].content1}}<br>
+            &#9679;  {{CCurriculum.listofContent[0].content2}}<br>
+            &#9679;  {{CCurriculum.listofContent[0].content3}}<br>
+            &#9679;  {{CCurriculum.listofContent[0].content4}}<br>
+            &#9679;  {{CCurriculum.listofContent[0].content5}}<br>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<div class="container">
+  <div class="card" style="padding:20px;">
+    <div class="row">
+      <div class="col-md-9">
+        <h4>Like the curriculum? Enroll Now</h4>
+        <p style="font-size:15px;">Structure your learning and get a certificate to prove it.</p>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <input class="form-control" type="number" formControlName="PhoneNumber" [ngClass]="{ 'is-invalid': submitted && f.PhoneNumber.errors }" placeholder="Enter your Number*">
+              <div *ngIf="submitted && f.PhoneNumber.errors" class="invalid-feedback">
+                <div *ngIf="f.PhoneNumber.errors.required">PhoneNumber is required</div>
+              </div>
+            </div>
+            <div class="form-group col-md-4">
+              <input class="form-control curriculumemail" type="text" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" placeholder="Enter EmailID*">
+              <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <div *ngIf="f.email.errors.required">Email is required</div>
+                <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+              </div>
+            </div>
+            <div class="form-group col-md-4">
+              <button class="btn btn-warning">Enroll Now</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-3">
+        <img src="https://d1jnx9ba8s6j9r.cloudfront.net/imgver.1548330711/img/openform_rt.jpg" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<!-- <section id="section-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h4>Java J2EE Course Description</h4>
+      </div>
+    </div>    
+    <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+      <div class="card">
+        <div class="card-header" role="tab" id="headingOne1" style="background-color:white;">
+          <a data-toggle="collapse" style="text-decoration:none;color:black;font-size:15px;" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="true"
+            aria-controls="collapseOne1">
+            <h5 class="mb-0" style="font-size:15px;">
+                <i class="fa fa-plus-circle"></i> &nbsp;Introduction of Java
+            </h5>
+          </a>
+        </div>
+        <div id="collapseOne1" class="collapse" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
+          <div class="card-body">
+            <p style="font-size:15px;color:gray;"><b>Learning Objectives:</b> In this module, you will learn about Java architecture, advantages of Java, develop the code with various data types, conditions, and loops.<br>
+              <b>Topics:</b><br>
+              &#9679;  Introduction to Java<br>
+              &#9679;  Bytecode<br>
+              &#9679;  Class Files<br>
+              &#9679;  Compilation Process<br>
+              &#9679;  Data types, and Operations<br>
+              &#9679;  if conditions<br>
+              &#9679;  Loops – for<br>
+              &#9679;  while and do while<br></p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" role="tab" id="headingTwo2" style="background-color:white;">
+          <a class="collapsed" style="text-decoration:none;color:black;font-size:15px;" data-toggle="collapse" data-parent="#accordionEx" href="#collapseTwo2"
+            aria-expanded="false" aria-controls="collapseTwo2">
+            <h5 class="mb-0" style="font-size:15px;">
+                <i class="fa fa-plus-circle"></i> &nbsp;Data Handling and Functions
+            </h5>
+          </a>
+        </div>
+        <div id="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2" data-parent="#accordionEx">
+          <div class="card-body">
+            <p style="font-size:15px;color:gray;"><b>Learning Objectives:</b> In this module, you will learn how to code with arrays, functions, and strings. <br>
+              <b>Topics:</b><br>
+              &#9679; Arrays - Single Dimensional and Multidimensional arrays<br>
+              &#9679; Functions<br>
+              &#9679; Function with Arguments<br>
+              &#9679; Function Overloading<br>
+              &#9679; The concept of Static Polymorphism<br>
+              &#9679; String Handling - String<br>
+              &#9679; StringBuffer Classes<br></p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" role="tab" id="headingThree3" style="background-color:white;">
+          <a class="collapsed" style="text-decoration:none;color:black;" data-toggle="collapse" data-parent="#accordionEx" href="#collapseThree3"
+            aria-expanded="false" aria-controls="collapseThree3">
+            <h5 class="mb-0" style="font-size:15px;">
+                <i class="fa fa-plus-circle"></i> &nbsp;JDBC
+            </h5>
+          </a>
+        </div>
+        <div id="collapseThree3" class="collapse" role="tabpanel" aria-labelledby="headingThree3" data-parent="#accordionEx">
+          <div class="card-body">
+            <p style="font-size:15px;color:gray;"><b>Learning Objectives:</b> In this module, you will learn SQL, Architecture of JDBC, Different drivers of JDBC and to write code in JDBC to communicate with Database. <br>
+              <b>Topics:</b><br>
+              &#9679; Introduction to SQL: Connect, Insert, Update, Delete, Select<br>
+              &#9679; Introduction to JDBC and Architecture of JDBC<br>
+              &#9679; Types of Drivers: Type 1/2/3/4 drivers<br>
+              &#9679; Insert/Update/Delete/Select Operations using JDBC<br>
+              &#9679; Batch Processing Transaction<br>
+              &#9679; Management: Commit and Rollback<br></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- <section id="section-4">SECTION 4</section>
+<section id="section-5">SECTION 5</section> -->

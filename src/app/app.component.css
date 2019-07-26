@@ -1,0 +1,41 @@
+/* .middle {
+    opacity: 0;
+    position: absolute;
+  }
+  
+  .text {
+  padding-top:40px;
+  padding-bottom:40px;
+  background-color:black;opacity:0.5;
+  color: white;
+  font-size: 16px;
+  width:100%;height:100%;
+}
+  
+  .card:hover .card-img-top .card-body{
+    opacity: 0.3;
+  }
+  
+  .card:hover .middle {
+    width:100%;height:100%;
+    opacity: 0.8;
+  } */
+  .scroll-to-top {
+    position: fixed;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+    z-index: 99;
+    border:none;
+    outline: none;
+    background: rgba(0, 0, 0, 0) url(https://test4r51q.herokuapp.com/assets/scroll-up-new.png) no-repeat;
+    cursor: pointer;
+    width: 60px;
+    height: 65px;
+    bottom: 50px;
+    right: 10px;
+    text-indent: -9999px;
+  }
+  .show-scroll {
+    opacity: 1;
+    transition: all .2s ease-in-out;
+  }

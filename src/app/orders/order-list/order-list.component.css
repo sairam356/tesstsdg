@@ -1,0 +1,15 @@
+.top-left {
+    position: absolute;
+    top: 18px;
+    left: 125px;
+}
+.titleworkshop {
+    position: absolute;
+    top: 108px;
+    left: 125px;
+}
+.ContactDetails {
+    position: absolute;
+    top: 208px;
+    left: 125px;
+}
